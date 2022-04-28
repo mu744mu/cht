@@ -1,0 +1,641 @@
+   div#wall {
+            border: none !important;
+        }
+
+        span.istoa.fa.fa-microphone {
+            margin-top: 4px !important;
+            zoom: 0.8 !important;
+            color: gray !important;
+            margin-left: -6px !important;
+        }
+
+        label.ae.fa.label.fa-commenting-o.label-warning {
+            background: orange;
+            color: orange;
+        }
+
+        span.bwall.minix.badge.border {
+            display: none;
+        }
+
+        label.ae.fa.chats.label.fa-comment.label-primary {
+            width: 46px;
+        }
+
+        .label,
+        .btn {
+            border-radius: 1px;
+        }
+
+        label.ae.fa.chats.label.fa-comment.label-primary {
+            width: 21%;
+        }
+
+        label.ae.fa.label.label-primary.fa-user {
+            height: 33.5px;
+        }
+
+        .popover {
+            height: 250px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        span.busers.minix.badge.border {
+            background: transparent;
+            border: none;
+            font-size: 15px !important;
+            margin-left: 2px;
+            margin-top: -5px;
+        }
+
+        .loginItms {
+            position: absolute;
+            display: none;
+            border: 2px solid #af020b;
+            background-color: #f93634;
+            border-radius: 25px 0 0 25px;
+            background-image: url(imgs/banner.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            right: 0px;
+            top: 30px;
+            width: 250px;
+        }
+
+        .loginImg {
+            float: right;
+            width: 36px;
+            height: 36px;
+            border: 1px solid #ed5555;
+            margin: 1px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+        }
+
+        #remote-video {
+            height: 0px;
+            width: 0px;
+            z-index: -1;
+            position: absolute;
+        }
+
+        #local-video {
+            height: 0px;
+            z-index: -1;
+            width: 0px;
+            position: absolute;
+        }
+
+        .loginLogo {
+            float: right;
+            margin: 1px;
+            margin-top: -20px
+        }
+
+        .loginIco {
+            float: right;
+            margin: 0px 1px 1px;
+            max-height: 18px;
+            background-color: white;
+            padding: 1px;
+            border-radius: 2px;
+        }
+
+        .loginFlog {
+            float: left;
+            margin: 2px 0 5px 5px;
+            max-height: 15px;
+        }
+
+        .loginUserName {
+            font-size: 15px !important;
+            float: right;
+            font-family: arial;
+            font-weight: 9000;
+            max-width: 170px;
+            min-width: 100px;
+            text-align: right;
+            text-shadow: -1px 1px 2px #fff;
+            color: #842c2a;
+            white-space: nowrap;
+            overflow: hidden !important;
+            text-overflow: ellipsis;
+        }
+
+        button.ae.label.label-primary.fa.fa-gear {
+            padding-left: 8px;
+        }
+
+        button.btn.fr.btn-success.fa.fa-refresh {
+            background: #5cb85c;
+            border-color: #5cb85c;
+            padding: 8px 12px !important;
+        }
+
+        label.ae.fa.chats.label.fa-comment.label-warning {
+            background: none !important;
+            color: orange;
+        }
+
+        .label-warning {
+            background: none !important;
+            color: orange !important;
+        }
+    </style>
+<style>
+        .fa-volume-up:before {
+            content: "\f028";
+            color: black;
+        }
+
+        * {
+            font-family: serif;
+            font-weight: bold;
+            text-shadow: none !important;
+            font-size: 15px !important;
+        }
+
+        .ae {
+            border: 1px solid black !important;
+            border-radius: 2px !important;
+            float: left;
+            text-align: center;
+            width: 20%;
+            max-width: 80px;
+            padding: 9px 0px;
+            margin: 1px;
+            margin-top: 2px;
+            height: 33.5px;
+            cursor: pointer;
+        }
+
+        label {
+            display: inline-block;
+            max-width: 100%;
+            margin-bottom: 1px !important;
+            font-weight: 700;
+        }
+
+        .pmsgc {
+            background-color: rgba(0, 77, 255, 0.08) !important;
+        }
+
+        .ppmsgc {
+            background-color: #f1f1ff !important;
+        }
+
+        .hmsg {
+            background-color: linen !important;
+        }
+
+        .label-primary,
+        .btn-primary,
+        .bg-primary,
+        .label-primary:hover,
+        .btn-primary:hover,
+        .btn-primary:focus {}
+
+       
+        }
+        .content-name{
+            display: none;
+        }
+
+        .hid {
+            display: none;
+        }
+
+        .typingIndicatorBubbleDot {
+            width: 4px;
+            height: 4px;
+            margin-right: 4px;
+            background-color: #57585a;
+            border-radius: 50%;
+            animation-name: bounce;
+            animation-duration: 1.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        .label-primary[href]:focus,
+        .label-primary[href]:hover {
+            background: none !important;
+        }
+
+        .typingIndicatorBubbleDot:first-of-type {
+            margin: 0px 4px;
+        }
+
+        .typingIndicatorBubbleDot:nth-of-type(2) {
+            animation-delay: 0.15s;
+        }
+
+        .typingIndicatorBubbleDot:nth-of-type(3) {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            60%,
+            100% {
+                transform: translateY(0);
+            }
+
+            30% {
+                transform: translateY(-4px);
+            }
+        }
+
+        .broadcasters {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: #000;
+            left: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .broadcasters>div {
+            max-width: 260px;
+        }
+
+        span.number {
+            font-size: 10px !important;
+            margin-top: -4px;
+        }
+
+        a.btn.minix.btn-primary.fa.fa-times.fr {
+            background: none;
+            color: #d9534f;
+            border: none;
+        }
+
+
+        .broadcasters>div>.prods {
+            position: relative !important;
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin: 0 1px;
+            text-align: center;
+            border-radius: 1% !important;
+            background-color: #4caf50;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: stretch;
+            justify-content: flex-start;
+            align-items: stretch;
+            margin-top: -52px;
+            padding: 5px;
+            right: 55px !important;
+            top: 2px;
+            cursor: pointer !important;
+            border: 1px solid #4caf50;
+        }
+
+        .broadcasters>div>.prods>.fa {
+            font-size: 28px !important;
+            text-align: center;
+            margin-top: 5px;
+            color: darkgray;
+            "
+
+        }
+
+
+        .broadcasters>div>.prod {
+            position: relative;
+            float: right;
+            width: 50px;
+            height: 50px;
+            border: 2px solid gainsboro;
+            margin: 0 1px;
+            text-align: center;
+            border-radius: 1%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: stretch;
+            justify-content: flex-start;
+            align-items: stretch;
+            padding: 5px;
+            cursor: pointer !important;
+        }
+
+        .broadcasters>div>.prod>.fa-microphone {
+            font-size: 28px !important;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        .broadcasters>div>.prod>hr {
+            margin: 0;
+            border-top-color: #d9534f;
+        }
+
+        .broadcasters>div>.prod>.evant>i {
+            position: relative;
+            font-size: 16px !important;
+            text-align: center;
+            top: 36px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #ffffffc7;
+            border: 1px solid #d9534f70;
+        }
+
+        .broadcasters>div>.prods>.ismute {
+            position: absolute;
+            height: 3px;
+            background: gray;
+            display: none;
+            width: 38px;
+            margin-left: -2px;
+            margin-top: 17px;
+            transform: rotate(135deg);
+        }
+
+        .broadcasters>div>.prod>.ismute {
+            position: absolute;
+            height: 3px;
+            background: gray;
+            display: none;
+            width: 50px;
+            margin-left: -3px;
+            margin-top: 22px;
+            transform: rotate(135deg);
+        }
+
+        .u-topic.dots {
+            white-space: nowrap;
+            max-width: 130%;
+        }
+
+        .is_speaking {
+            box-shadow: 0px 0px 10px #00ff00
+        }
+
+        input#u2,
+        input#pass1,
+        input#u3,
+        input#pass2 {
+            width: 206px;
+            padding: 5px;
+            border-radius: 2px;
+            height: 33px;
+        }
+
+        input#u1 {
+            width: 206px;
+            margin-top: 33px;
+            padding: 5px;
+            border-radius: 2px;
+            height: 33px;
+        }
+
+        .typing span {
+            display: none;
+        }
+
+        label.ae.fa.label.fa-commenting-o.label-warning {
+            color: orange !important;
+        }
+
+        button.ae.fa.label.fa-commenting-o.label-warning {
+            background: none !important;
+            color: orange;
+        }
+
+        .fa-commenting-o:before {
+            content: "";
+        }
+
+        div#d2bc,
+        div#settings,
+        div#rooms,
+        div#chats,
+        div#users {
+            border: none !important;
+        }
+
+        .bord {
+            border-left: 3px solid dodgerblue !important;
+            border-right: 3px solid dodgerblue !important;
+            border-bottom: none !important;
+            border-top: none !important;
+        }
+
+        .d2,
+        #rooms,
+        #users {
+            background-color: #fafafa !important;
+        }
+
+        div#dpnl {
+            border: 1px solid;
+            border-radius: 0px;
+            width: 340px;
+            max-width: 310px;
+            min-width: 300px;
+            padding-top: 20px;
+            padding-bottom: 8px;
+            position: absolute;
+            display: inline-flex;
+            top: 0px;
+            flex-flow: row-reverse wrap;
+            place-content: space-around space-between;
+            align-items: flex-end;
+            right: 0px !important;
+        }
+
+        .label-info {
+            background-color: #5bc0de !important;
+        }
+
+        label.label.tc.border.btn.label-info.fl {
+            background: #fff !important;
+        }
+
+        #topWall div span:before {
+            float: left;
+            font-weight: 100 !important;
+        }
+
+        .topWall3 {
+            margin-top: 5px;
+            width: 100%;
+            height: 150px;
+            background: url(imgs/topWall.png) white;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+
+        .topWall3>div {
+            width: 60px;
+            height: 60px;
+            border-radius: 0%;
+            border: 2px solid;
+            background-size: contain;
+        }
+
+        .topWall3>div>span {
+            margin-top: 62px;
+            padding: 0px 1px;
+            text-align: center;
+            margin-left: -10%;
+            min-width: 120%;
+            border-radius: 0px;
+            text-overflow: clip;
+            border-right: none !important;
+            border-left: none !important;
+            border-top: none !important;
+            font-size: 13px !important;
+        }
+
+        .topWall3 .toptop {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .topWall3 .toptop span.corner.dots {
+            background-color: rgba(0, 0, 0, 0.1);
+            height: 20px;
+            border-radius: 0;
+            border: none;
+        }
+
+
+
+        .topWall10 {
+            width: 100%;
+            height: 75%;
+            margin-top: 5px;
+            border-top: 2px solid;
+            color: #2196f3;
+        }
+
+        .topWall10>div.top {
+            width: 99%;
+            margin: 0px 1px -1px 2px !important;
+            padding: 1px;
+            border-bottom: 2px solid;
+
+        }
+
+        .topWall10>div.top>span.dots {
+            padding: 0px;
+            width: 18px;
+            text-align: center;
+            margin: 15px 2px 0px;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            border-radius: 0px;
+        }
+
+        .points {
+            max-width: 18% !important;
+        }
+
+        .topWall10>div.top>img {
+            margin-bottom: 4px;
+            border-radius: 0px;
+            border: 1px solid;
+            width: 45px;
+            height: 45px;
+            margin-left: 1px;
+            margin-top: 2px;
+            background-color: white;
+        }
+
+        .topWall10>div.top>div {
+            width: 70%;
+            margin-top: 6px;
+        }
+
+        .topWall10>div.top>div>span.dots {
+            padding: 0px 2px;
+        }
+
+        .topWall10>div.top>div>div {
+            width: 100%;
+        }
+
+        .topWall10>div.top>div>div>span {
+            margin-top: -6px;
+            padding: 1px 4px;
+            width: 31%;
+            text-align: center;
+            border-bottom: 1px solid;
+        }
+
+
+        .topWall10>div.toptop>div>span.dots {
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 0;
+            width: 100%;
+            margin-left: 4px;
+            height: 20px;
+        }
+
+        .topWall10>div.toptop>img {
+            background-color: rgba(0, 0, 0, 0.1);
+            border: none;
+        }
+
+        .topWall10>div.toptop>div>div>span {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: rgb(229 229 229);
+            margin-top: -3px !important;
+        }
+
+        .topWall10>div.toptop>span.dots {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: #ffffff;
+            text-shadow: -2px 1px 2px black !important;
+            border-color: #9b9b9b;
+        }
+
+        .topWall10>div.toptop>div>div {
+            width: 96%;
+            margin-left: 6px;
+        }
+        .form{
+            position: relative;
+    top: 8px;
+    left: 34px;
+        }
+    </style>
+<script type="">
+        const hicolor = "<%= colors.hicolor %>";
+        const bgcolor = "<%= colors.bgcolor %>";
+        const btcolor = "<%= colors.btcolor %>";
+        var aa = '<style class="colorLo">.border{border-color: #' +
+            '000' + "} .primaryborder{border-color: #" +
+            btcolor + "} .label-primary, .btn-primary {background-color: #" +
+            btcolor + "} .light{background-color: #" +
+            hicolor + "} .bg{background-color: #" +
+            bgcolor + "} .broadcasters>div>.prod{color:#" +
+            btcolor + " !important} .broadcasters>div>.prod>.evant>i{color:#" +
+            btcolor + " !important} .broadcasters>div>.prod>hr{border-top-color:#" +
+            btcolor + " !important} .broadcasters{background:#" +
+            btcolor + " !important}</style>";
+        $("head").append(aa);
+
+        const scripts = "<%= script %>";
+        if (scripts) {
+            $.get(scripts).then((response) => {
+                response = JSON.parse(response);
+                $('<script>' + response['settscr'] + '</' + 'script>').appendTo(document.body);
+            });
+        };
